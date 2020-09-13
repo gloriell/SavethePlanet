@@ -1,0 +1,303 @@
+@font-face {
+  font-family: "Circular";
+  src: url(/font/Circular_Std_Font.otf);
+  font-family: "Display";
+  src: url(font/DMSerifDisplay.ttf);
+  font-family: "SofiaPro";
+  src: url(font/sofiapro-light.otf);
+}
+
+:root {
+  font-size: 16px;
+}
+
+html,
+body {
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url(img/main-wolf-image.png);
+  background-size: cover;
+  margin-left: 4.5rem;
+  padding: 1rem;
+  height: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar {
+  width: 4.5rem;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1rem;
+  font-family: "sofiapro";
+  position: absolute;
+}
+.sidebar_details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-right: 1.65rem;
+  height: 70%;
+  margin: auto;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.navbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  left: 18%;
+  right: 18%;
+  margin-top: 20px;
+  padding-top: 25px;
+}
+
+.logo {
+  cursor: pointer;
+}
+.navbar_list {
+  font-size: 1.3rem;
+}
+
+.navbar_list li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.navbar_list img {
+  padding-left: 15px;
+}
+/* ----------Punctul apare doar daca fac hover pe punct nu si pe scris + pe celalalte decat home nu este aliniat--------- */
+#white-point {
+  display: flex;
+  padding: 10px 22px;
+  opacity: 0;
+}
+#white-point:hover {
+  opacity: 100;
+  transition: 0.3s ease all;
+}
+/* ---------------COD PENTRU DROPDOWN care nu functioneaza------------------- */
+.story-link {
+  display: flex;
+}
+
+.story-link:hover .dropdown-container {
+  display: block;
+}
+
+.dropdown-container {
+  position: relative;
+  display: none;
+}
+
+.dropdown {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 22px;
+  margin-top: -5px;
+  background-color: #272626;
+  width: 161px;
+  height: 186px;
+}
+
+.dropdown a:hover {
+  color: #55bba6;
+  transition: all 0.5s ease;
+}
+
+.dropdown img {
+  padding-top: 10px;
+}
+
+/* ---------------------------------------------------- */
+
+/* ----------scris interior cu butoane----------- */
+.interior_text {
+  color: white;
+}
+
+.interior_text h4 {
+  font-size: 1rem;
+  letter-spacing: 2.4px;
+  padding-top: 10px;
+}
+
+.interior_text h1 {
+  font-size: 8.12rem;
+  letter-spacing: 19.6px;
+  padding: 15px 0px;
+}
+
+.interior_text h6 {
+  font-size: 1.12rem;
+  font-family: "SofiaPro";
+  letter-spacing: 1.72px;
+  padding: 5px 0px;
+}
+
+.interior_text p {
+  font-size: 0.75rem;
+  letter-spacing: 0.7px;
+  padding: 30px 0px;
+}
+
+.buttons {
+  display: inline;
+}
+
+.primary-btn {
+  background-color: #55bba6;
+  border-radius: 2px;
+  height: 60px;
+  width: 250px;
+  border: none;
+  outline: none;
+}
+
+.secondary-btn {
+  width: 250px;
+  height: 60px;
+  border-radius: 2px;
+  border: 4px white solid;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  font-size: 1.12rem;
+  font-family: "SofiaPro";
+  letter-spacing: 0.7px;
+  font-weight: bold;
+  color: white;
+}
+.primary-btn:hover {
+  filter: brightness(85%);
+  transition: 0.6s all ease;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.6s all ease;
+}
+
+.interior_text {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  z-index: 1;
+  height: 70%;
+  margin-top: 15%;
+}
+
+.down-arrow {
+  display: flex;
+  margin-top: 20px;
+  position: absolute;
+}
+/* -------------------------------------------- */
+
+/* ------------Paragrafe------------- */
+.middle {
+  height: 30%;
+}
+.mini-hero {
+  display: flex;
+  color: #484848;
+  font-family: "sofiaPro";
+  font-size: 1.2rem;
+  left: 18%;
+  right: 30%;
+  position: absolute;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.title {
+  font-size: 2.2rem;
+  letter-spacing: 5.44px;
+  color: #55bba6;
+  position: relative;
+  margin-left: 18%;
+  padding: 60px 0px 30px 0;
+}
+
+.txt1 p,
+.txt2 p,
+.txt3 p {
+  padding: 4px 0px;
+}
+/* ------------------------------------ */
+.hero2 {
+  display: flex;
+  position: absolute;
+  height: 60%;
+  left: 18%;
+  right: 18%;
+}
+.overlay {
+  opacity: 1.2;
+  background-color: black;
+  position: relative;
+  width: 485px;
+  height: 599px;
+}
+.sheep-photo-above {
+  position: relative;
+  width: 487px;
+  height: 601px;
+}
+.interior-stuff {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 7%;
+}
+
+.hero2 h2 {
+  font-size: 1.8rem;
+  letter-spacing: 3.76px;
+  padding: 5px 0px 15px 0px;
+}
+
+.hero2 p {
+  font-size: 1.2rem;
+  font-family: "sofiaPro";
+  padding-bottom: 7px;
+}
+
+.writing {
+  padding-bottom: 40px;
+}
+
+.photos {
+  margin: 0 4px;
+}
