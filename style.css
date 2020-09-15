@@ -7,10 +7,6 @@
   src: url(font/sofiapro-light.otf);
 }
 
-:root {
-  font-size: 16px;
-}
-
 html,
 body {
   background-color: #f2f2f2;
@@ -25,11 +21,10 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
-    url(img/main-wolf-image.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(img/main-wolf-image.png);
   background-size: cover;
-  margin-left: 4.5rem;
-  padding: 1rem;
+  margin-left: 90px;
+  padding: 16px;
   height: 100%;
 }
 
@@ -39,20 +34,21 @@ a {
 }
 
 .sidebar {
-  width: 4.5rem;
+  width: 90px;
   height: 100%;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "sofiapro";
   position: absolute;
 }
-.sidebar_details {
+
+.sidebar__details {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding-right: 1.65rem;
+  padding-right: 30px;
   height: 70%;
   margin: auto;
   font-weight: bold;
@@ -74,43 +70,73 @@ a {
 .logo {
   cursor: pointer;
 }
-.navbar_list {
-  font-size: 1.3rem;
+
+.navbar__list {
+  font-size: 18px;
 }
 
-.navbar_list li {
+.navbar__list li {
   display: inline-block;
   padding: 0px 15px;
 }
 
-.navbar_list img {
+.navbar__list img {
   padding-left: 15px;
 }
 /* ----------Punctul apare doar daca fac hover pe punct nu si pe scris + pe celalalte decat home nu este aliniat--------- */
-#white-point {
+#white__point__home {
   display: flex;
   padding: 10px 22px;
   opacity: 0;
 }
-#white-point:hover {
+#white__point__contact {
+  display: flex;
+  padding: 10px 30px;
+  opacity: 0;
+}
+
+#white__point__lesson {
+  display: flex;
+  padding: 10px 25px;
+  opacity: 0;
+}
+
+#white__point__account {
+  display: flex;
+  padding: 10px 31px;
+  opacity: 0;
+}
+
+#white__point__home:hover {
   opacity: 100;
   transition: 0.3s ease all;
 }
+
+#white__point__contact:hover {
+  opacity: 100;
+  transition: 0.3s ease all;
+}
+
+#white__point__lesson:hover {
+  opacity: 100;
+  transition: 0.3s ease all;
+}
+
+#white__point__account:hover {
+  opacity: 100;
+  transition: 0.3s ease all;
+}
+
 /* ---------------COD PENTRU DROPDOWN care nu functioneaza------------------- */
-.story-link {
+.story__link {
   display: flex;
 }
 
-.story-link:hover .dropdown-container {
+.story__link:hover .dropdown-container {
   display: block;
 }
 
-.dropdown-container {
-  position: relative;
-  display: none;
-}
-
-.dropdown {
+.dropdown__container {
   color: white;
   display: flex;
   flex-direction: column;
@@ -121,6 +147,11 @@ a {
   background-color: #272626;
   width: 161px;
   height: 186px;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
 }
 
 .dropdown a:hover {
@@ -135,40 +166,44 @@ a {
 /* ---------------------------------------------------- */
 
 /* ----------scris interior cu butoane----------- */
-.interior_text {
+.hero__description {
   color: white;
 }
 
-.interior_text h4 {
-  font-size: 1rem;
+.hero__description h4 {
+  font-size: 16px;
+  line-height: 19px;
   letter-spacing: 2.4px;
   padding-top: 10px;
 }
 
-.interior_text h1 {
-  font-size: 8.12rem;
+.hero__description h1 {
+  font-size: 130px;
   letter-spacing: 19.6px;
   padding: 15px 0px;
+  line-height: 178px;
 }
 
-.interior_text h6 {
-  font-size: 1.12rem;
+.hero__description h6 {
+  font-size: 18px;
   font-family: "SofiaPro";
   letter-spacing: 1.72px;
   padding: 5px 0px;
+  line-height: 29px;
 }
 
-.interior_text p {
-  font-size: 0.75rem;
+.hero__description p {
+  font-size: 12px;
   letter-spacing: 0.7px;
   padding: 30px 0px;
+  line-height: 29px;
 }
 
 .buttons {
   display: inline;
 }
 
-.primary-btn {
+.primary__btn {
   background-color: #55bba6;
   border-radius: 2px;
   height: 60px;
@@ -177,7 +212,7 @@ a {
   outline: none;
 }
 
-.secondary-btn {
+.secondary__btn {
   width: 250px;
   height: 60px;
   border-radius: 2px;
@@ -187,26 +222,27 @@ a {
   margin: 50px 20px;
 }
 
-.primary-btn,
-.secondary-btn {
-  font-size: 1.12rem;
+.primary__btn,
+.secondary__btn {
+  font-size: 18px;
   font-family: "SofiaPro";
   letter-spacing: 0.7px;
   font-weight: bold;
   color: white;
+  line-height: 24px;
 }
-.primary-btn:hover {
+.primary__btn:hover {
   filter: brightness(85%);
   transition: 0.6s all ease;
 }
 
-.secondary-btn:hover {
+.secondary__btn:hover {
   background-color: white;
   color: black;
   transition: 0.6s all ease;
 }
 
-.interior_text {
+.hero__description {
   position: absolute;
   left: 18%;
   right: 18%;
@@ -215,7 +251,7 @@ a {
   margin-top: 15%;
 }
 
-.down-arrow {
+.down__arrow {
   display: flex;
   margin-top: 20px;
   position: absolute;
@@ -226,11 +262,13 @@ a {
 .middle {
   height: 30%;
 }
-.mini-hero {
+
+.middle__description {
   display: flex;
   color: #484848;
   font-family: "sofiaPro";
-  font-size: 1.2rem;
+  font-size: 18px;
+  line-height: 30px;
   left: 18%;
   right: 30%;
   position: absolute;
@@ -239,7 +277,8 @@ a {
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 39px;
+  line-height: 49px;
   letter-spacing: 5.44px;
   color: #55bba6;
   position: relative;
@@ -252,14 +291,16 @@ a {
 .txt3 p {
   padding: 4px 0px;
 }
+
 /* ------------------------------------ */
-.hero2 {
+.gallery {
   display: flex;
   position: absolute;
   height: 60%;
   left: 18%;
   right: 18%;
 }
+
 .overlay {
   opacity: 1.2;
   background-color: black;
@@ -267,12 +308,14 @@ a {
   width: 485px;
   height: 599px;
 }
-.sheep-photo-above {
+
+.sheep__photo__above {
   position: relative;
   width: 487px;
   height: 601px;
 }
-.interior-stuff {
+
+.interior__gallery {
   z-index: 1;
   position: absolute;
   color: white;
@@ -282,14 +325,16 @@ a {
   padding-left: 7%;
 }
 
-.hero2 h2 {
-  font-size: 1.8rem;
+.gallery h2 {
+  font-size: 28px;
+  line-height: 38px;
   letter-spacing: 3.76px;
   padding: 5px 0px 15px 0px;
 }
 
-.hero2 p {
-  font-size: 1.2rem;
+.gallery p {
+  font-size: 18px;
+  line-height: 30px;
   font-family: "sofiaPro";
   padding-bottom: 7px;
 }
