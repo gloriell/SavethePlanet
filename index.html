@@ -21,43 +21,44 @@
         <div class="logo"><img src="./img/Logo.svg" alt="Logo" /></div>
         <div class="navbar__list">
           <ul>
-            <li>
-              <a href="#">Home <img src="img/white-oval.svg" alt="" id="white__point__home" /></a>
+            <li class="navbar__description">
+              <a href="#">Home</a>
             </li>
-            <li>
-              <a href="#" class="story__link">Story<img src="img/Path.svg" alt="down arrow" /></a>
+            <div class="navbar__description">
+              <a href="#" class="story__link">Story<img src="img/Path.svg" alt="down arrow" class="story__image" /></a>
               <div class="dropdown">
-                <img src="/img/Triangle.svg" alt="" />
+                <img src="/img/Triangle.svg" alt="" class="little__triangle" />
                 <ul class="dropdown__container">
-                  <li><a href="#">Team</a></li>
-                  <img src="img/Rectangle.svg" alt="line" />
-                  <li><a href="#">Project</a></li>
-                  <img src="img/Rectangle.svg" alt="line" />
-                  <li><a href="#">Future</a></li>
+                  <li class="dropdown__description"><a href="#">Team</a></li>
+                  <img src="img/Rectangle.svg" alt="line" class="dropdown__line" />
+                  <li class="dropdown__description"><a href="#">Project</a></li>
+                  <img src="img/Rectangle.svg" alt="line" class="dropdown__line" />
+                  <li class="dropdown__description"><a href="#">Future</a></li>
                 </ul>
               </div>
+            </div>
+
+            <li class="navbar__description">
+              <a href="#">Contact </a>
             </li>
-            <li>
-              <a href="#">Contact <img src="img/white-oval.svg" alt="" id="white__point__contact" /></a>
+            <li class="navbar__description">
+              <a href="#">Lesson</a>
             </li>
-            <li>
-              <a href="#">Lesson <img src="img/white-oval.svg" alt="" id="white__point__lesson" /></a>
-            </li>
-            <li>
-              <a href="#">Account <img src="img/white-oval.svg" alt="" id="white__point__account" /></a>
+            <li class="navbar__description">
+              <a href="#">Account </a>
             </li>
           </ul>
         </div>
       </nav>
       <div class="hero__description">
         <img src="img/green-line.svg" alt="" />
-        <h4>WE TEACH YOU TO PROTECT OUR</h4>
-        <h1>PLANET</h1>
-        <h6>Our planet is precious and vital for our</h6>
-        <h6>beautiful lives,if we don't take care of it</h6>
-        <h6>it will dissapear along with us.</h6>
+        <h4 class="hero__description1">we teach you to protect our planet</h4>
+        <h1 class="hero__description2">planet</h1>
+        <p class="hero__description3">
+          Our planet is precious and vital for our beautiful lives, if we don't take care of it will dissapear along with us.
+        </p>
 
-        <p>*Please take note that your actions matter more then you think.</p>
+        <p class="hero__description4">*Please take note that your actions matter more then you think.</p>
         <div class="buttons">
           <button class="primary__btn">Find out more</button>
           <button class="secondary__btn">Play Video</button>
@@ -66,48 +67,28 @@
       </div>
     </section>
 
-    <div class="middle">
-      <h3 class="title">Our Mission</h3>
-      <div class="middle__description">
-        <div class="txt__1">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
-
-        <div class="txt__2">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
-
-        <div class="txt__3">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
+    <div class="mission">
+      <h3 class="mission__title">Our Mission</h3>
+      <div class="mission__description">
+        <p class="mission__text">Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.</p>
+        <p class="mission__text">Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.</p>
+        <p class="mission__text">Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.</p>
       </div>
     </div>
 
     <section class="gallery">
       <div class="overlay">
-        <div class="sheep__photo__above">
+        <div class="gallery__sheep">
           <img src="img/sheep_above.png" alt="Photo of sheep from above" class="sheep_above" />
         </div>
       </div>
 
-      <div class="interior__gallery">
+      <div class="gallery__interior">
         <img src="img/green-line.svg" alt="green line" />
-        <h2>Wildlife</h2>
-        <div class="writing">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
+        <h2 class="gallery__title">Wildlife</h2>
+        <p class="gallery__description">
+          Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.
+        </p>
         <button class="primary__btn" id="prm__btn">Find out more</button>
       </div>
       <div class="photos">

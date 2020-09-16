@@ -75,64 +75,32 @@ a {
   font-size: 18px;
 }
 
-.navbar__list li {
+.navbar__description {
   display: inline-block;
   padding: 0px 15px;
+  font-size: 18px;
+  letter-spacing: 23px;
+  letter-spacing: 0.92px;
 }
 
-.navbar__list img {
-  padding-left: 15px;
-}
-/* ----------Punctul apare doar daca fac hover pe punct nu si pe scris + pe celalalte decat home nu este aliniat--------- */
-#white__point__home {
+.navbar__description::after {
+  content: url(/img/white-oval.svg);
   display: flex;
-  padding: 10px 22px;
+  padding: 10px 20px;
   opacity: 0;
 }
-#white__point__contact {
-  display: flex;
-  padding: 10px 30px;
-  opacity: 0;
-}
-
-#white__point__lesson {
-  display: flex;
-  padding: 10px 25px;
-  opacity: 0;
-}
-
-#white__point__account {
-  display: flex;
-  padding: 10px 31px;
-  opacity: 0;
-}
-
-#white__point__home:hover {
-  opacity: 100;
-  transition: 0.3s ease all;
-}
-
-#white__point__contact:hover {
-  opacity: 100;
-  transition: 0.3s ease all;
-}
-
-#white__point__lesson:hover {
-  opacity: 100;
-  transition: 0.3s ease all;
-}
-
-#white__point__account:hover {
+.navbar__description:hover::after {
   opacity: 100;
   transition: 0.3s ease all;
 }
 
 /* ---------------COD PENTRU DROPDOWN care nu functioneaza------------------- */
-.story__link {
-  display: flex;
+
+.story__image {
+  padding-left: 15px;
 }
 
-.story__link:hover .dropdown-container {
+.story__link:hover .dropdown {
   display: block;
 }
 
@@ -147,10 +115,12 @@ a {
   background-color: #272626;
   width: 161px;
   height: 186px;
+  list-style: none;
 }
 
 .dropdown {
   position: relative;
+  list-style: none;
   display: none;
 }
 
@@ -159,8 +129,12 @@ a {
   transition: all 0.5s ease;
 }
 
-.dropdown img {
+.dropdown__line {
   padding-top: 10px;
+}
+
+.little__triangle {
+  margin-left: 15px;
 }
 
 /* ---------------------------------------------------- */
@@ -170,29 +144,32 @@ a {
   color: white;
 }
 
-.hero__description h4 {
+.hero__description1 {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.4px;
   padding-top: 10px;
+  text-transform: uppercase;
 }
 
-.hero__description h1 {
+.hero__description2 {
   font-size: 130px;
   letter-spacing: 19.6px;
   padding: 15px 0px;
   line-height: 178px;
+  text-transform: uppercase;
 }
 
-.hero__description h6 {
+.hero__description3 {
   font-size: 18px;
   font-family: "SofiaPro";
   letter-spacing: 1.72px;
   padding: 5px 0px;
   line-height: 29px;
+  width: 432px;
 }
 
-.hero__description p {
+.hero__description4 {
   font-size: 12px;
   letter-spacing: 0.7px;
   padding: 30px 0px;
@@ -259,11 +236,11 @@ a {
 /* -------------------------------------------- */
 
 /* ------------Paragrafe------------- */
-.middle {
+.mission {
   height: 30%;
 }
 
-.middle__description {
+.mission__description {
   display: flex;
   color: #484848;
   font-family: "sofiaPro";
@@ -276,7 +253,7 @@ a {
   height: 50%;
 }
 
-.title {
+.mission__title {
   font-size: 39px;
   line-height: 49px;
   letter-spacing: 5.44px;
@@ -286,12 +263,10 @@ a {
   padding: 60px 0px 30px 0;
 }
 
-.txt1 p,
-.txt2 p,
-.txt3 p {
-  padding: 4px 0px;
+.mission__text {
+  width: 241px;
+  height: 120px;
 }
-
 /* ------------------------------------ */
 .gallery {
   display: flex;
@@ -309,13 +284,13 @@ a {
   height: 599px;
 }
 
-.sheep__photo__above {
+.gallery__sheep {
   position: relative;
   width: 487px;
   height: 601px;
 }
 
-.interior__gallery {
+.gallery__interior {
   z-index: 1;
   position: absolute;
   color: white;
@@ -325,22 +300,20 @@ a {
   padding-left: 7%;
 }
 
-.gallery h2 {
+.gallery__title {
   font-size: 28px;
   line-height: 38px;
   letter-spacing: 3.76px;
   padding: 5px 0px 15px 0px;
 }
 
-.gallery p {
+.gallery__description {
   font-size: 18px;
   line-height: 30px;
   font-family: "sofiaPro";
-  padding-bottom: 7px;
-}
-
-.writing {
-  padding-bottom: 40px;
+  margin-bottom: 35px;
+  width: 241px;
+  height: 120px;
 }
 
 .photos {
