@@ -580,7 +580,7 @@ a {
   .gallery {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin-left: -34px;
   }
 
   .sheep__above {
