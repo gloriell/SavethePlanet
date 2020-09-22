@@ -49,10 +49,18 @@ a {
   align-items: center;
   justify-content: space-evenly;
   padding-right: 30px;
-  height: 70%;
+  height: 100%;
   margin: auto;
   font-weight: bold;
   letter-spacing: 3px;
+}
+
+.green__dot {
+  height: 6px;
+  width: 6px;
+  background-color: #55bba6;
+  border-radius: 50%;
+  display: block;
 }
 
 .navbar {
@@ -71,7 +79,7 @@ a {
   cursor: pointer;
 }
 
-.mobile__logo {
+.navbar__logo {
   display: none;
 }
 
@@ -99,7 +107,7 @@ a {
   transition: 0.3s ease all;
 }
 
-.responsive__navbar {
+.navbar__responsive {
   display: none;
 }
 
@@ -151,11 +159,16 @@ a {
 /* ----------scris interior cu butoane----------- */
 .hero__description {
   color: white;
-
   position: absolute;
 }
 
-.hero__description1 {
+.green__line {
+  border-bottom: 5px solid #55bba6;
+  width: 27px;
+  display: block;
+}
+
+.hero__introduction {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.4px;
@@ -163,7 +176,7 @@ a {
   text-transform: uppercase;
 }
 
-.hero__description2 {
+.hero__banner {
   font-size: 130px;
   letter-spacing: 19.6px;
   padding: 15px 0px;
@@ -171,7 +184,7 @@ a {
   text-transform: uppercase;
 }
 
-.hero__description3 {
+.hero__content {
   font-size: 18px;
   font-family: "SofiaPro";
   letter-spacing: 1.72px;
@@ -180,14 +193,59 @@ a {
   width: 432px;
 }
 
-.hero__description4 {
+.hero__advise {
   font-size: 12px;
   letter-spacing: 0.7px;
   padding: 30px 0px;
   line-height: 29px;
 }
 
-.buttons {
+.hero__bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding-bottom: 20px;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -100px;
+  position: relative;
+}
+
+.counter__line {
+  display: block;
+  border-top: 2px solid white;
+  width: 10px;
+  margin: 0 5px;
+}
+
+.counter__number {
+  line-height: 26px;
+  width: 26px;
+  font-size: 12px;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  text-align: center;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.counter__number:hover {
+  color: black;
+  background-color: white;
+  width: 40px;
+  line-height: 40px;
+  transition: 0.3s all ease;
+  font-size: 18px;
+}
+
+.button {
   display: inline;
 }
 
@@ -340,18 +398,6 @@ a {
   display: none;
 }
 
-.sheep__mobile {
-  display: none;
-}
-
-.lighthouse__mobile {
-  display: none;
-}
-
-.above__mobile {
-  display: none;
-}
-
 /* tablet view */
 @media (max-width: 768px) {
   .hero {
@@ -362,27 +408,27 @@ a {
     padding-top: 100px;
   }
 
-  .hero__description1 {
+  .hero__introduction {
     font-size: 16px;
     letter-spacing: 2.41px;
   }
 
-  .hero__description2 {
+  .hero__banner {
     font-size: 110px;
     letter-spacing: 16.62px;
   }
 
-  .hero__description3 {
+  .hero__content {
     font-size: 18px;
     letter-spacing: 1.72px;
   }
 
-  .hero__description4 {
+  .hero__advise {
     font-size: 12px;
     letter-spacing: 0.7px;
   }
 
-  .buttons {
+  .button {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -404,7 +450,7 @@ a {
     display: none;
   }
 
-  .responsive__navbar {
+  .navbar__responsive {
     display: block;
   }
 
@@ -414,6 +460,10 @@ a {
     justify-content: space-between;
     height: 14px;
     width: 18px;
+  }
+
+  .burger__line {
+    border-top: 2px solid white;
   }
 
   .mission__description {
@@ -433,20 +483,15 @@ a {
   }
 
   .sheep__walking {
-    display: none;
-  }
-
-  .sheep__tablet {
-    display: block;
-  }
-
-  .lighthouse__tablet {
-    display: block;
-    margin-top: 4px;
+    width: 271px;
+    height: 380px;
+    object-fit: cover;
   }
 
   .lighthouse {
-    display: none;
+    width: 271px;
+    height: 216px;
+    object-fit: cover;
   }
 
   .gallery {
@@ -465,9 +510,20 @@ a {
     display: none;
   }
 
-  .mobile__logo {
+  .navbar__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navbar__logo {
     display: block;
-    padding-left: 25px;
+    padding-left: 20px;
+  }
+
+  .burgermenu {
+    margin-left: 200px;
   }
 
   .hero__description {
@@ -477,34 +533,30 @@ a {
     margin-top: 15px;
   }
 
-  .green__line {
-    margin-right: 25px;
-  }
-
-  .hero__description1 {
+  .hero__introduction {
     font-size: 16px;
     letter-spacing: 2.41px;
   }
 
-  .hero__description2 {
+  .hero__banner {
     font-size: 60px;
     letter-spacing: 9.06px;
     margin-top: -50px;
   }
 
-  .hero__description3 {
+  .hero__content {
     font-size: 16px;
     letter-spacing: 1.52px;
     padding-right: 50px;
     margin-top: -50px;
   }
 
-  .hero__description4 {
+  .hero__advise {
     font-size: 12px;
     letter-spacing: 0.7px;
   }
 
-  .buttons {
+  .button {
     display: flex;
     padding-top: 15px;
     flex-direction: column;
@@ -519,7 +571,7 @@ a {
     margin: 0 auto;
   }
 
-  .mobile__nav {
+  .navbar__mobile {
     width: 100%;
     display: flex;
     align-items: center;
@@ -558,23 +610,16 @@ a {
     margin-top: 200px;
   }
 
-  .sheep__tablet {
-    display: none;
+  .lighthouse {
+    width: 350px;
+    height: 212px;
+    object-fit: cover;
   }
 
-  .lighthouse__tablet {
-    display: none;
-    margin-top: 4px;
-  }
-
-  .sheep__mobile {
-    display: block;
-    margin-top: 4px;
-  }
-
-  .lighthouse__mobile {
-    display: block;
-    margin-top: 4px;
+  .sheep__walking {
+    width: 350px;
+    height: 237px;
+    object-fit: cover;
   }
 
   .gallery {
@@ -583,13 +628,16 @@ a {
     margin-left: -34px;
   }
 
-  .sheep__above {
-    display: none;
+  .gallery__above {
+    width: 350px;
+    height: 600px;
+    object-fit: cover;
+    padding: 4px 0;
+    margin-left: 4px;
   }
 
-  .above__mobile {
-    display: block;
-    width: 355px;
+  .counter {
+    display: none;
   }
 
   .overlay {
