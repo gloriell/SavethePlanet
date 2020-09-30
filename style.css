@@ -11,7 +11,6 @@ html,
 body {
   background-color: #f2f2f2;
   height: 100%;
-  width: 100%;
 }
 
 * {
@@ -27,8 +26,24 @@ body {
   margin-left: 90px;
   padding: 16px;
   height: 100%;
-  width: 100%;
+  width: calc(100%-90px);
   position: relative;
+}
+
+.hero.transition {
+  animation: transition 4s linear;
+}
+
+@keyframes transition {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 a {
@@ -321,9 +336,9 @@ a {
   line-height: 30px;
   left: 18%;
   right: 25%;
+  height: 350px;
   position: absolute;
   justify-content: space-between;
-  height: 50%;
 }
 
 .mission__title {
@@ -337,17 +352,17 @@ a {
 }
 
 .mission__text {
-  height: 120px;
   padding-right: 120px;
 }
 /* ------------------------------------ */
 .gallery {
   display: flex;
   position: absolute;
-  height: 60%;
+  height: 50%;
   left: 18%;
   right: 18%;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .overlay {
@@ -412,9 +427,10 @@ a {
   }
 
   .mission__text {
-    height: 100px;
+    height: 130px;
     padding-right: 50px;
   }
+
   .mission__text:first-of-type {
     padding-right: 30px;
     margin-bottom: 30px;
@@ -513,16 +529,95 @@ a {
     display: block;
   }
 
-  .burgermenu {
+  .navbar__hamburger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 14px;
     width: 18px;
+    cursor: pointer;
+    position: fixed;
+    top: 60px;
+    right: 200px;
+    z-index: 20;
   }
 
-  .burger__line {
+  .navbar__line {
     border-top: 2px solid white;
+    transition: all 1.5s;
+  }
+
+  .appear .navbar__line:first-of-type {
+    transform: translateY(7px) rotateZ(405deg);
+    border-top: 2px solid #55bba6;
+  }
+
+  .appear .navbar__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .appear .navbar__line:last-of-type {
+    transform: translateY(-5px) rotateZ(-405deg);
+    border-top: 2px solid #55bba6;
+  }
+
+  .navbar__greyline {
+    border-bottom: 2px solid #ffffff;
+    opacity: 0.2;
+    display: block;
+    width: 100px;
+    padding-top: 50px;
+  }
+
+  .navbar__pumpkin {
+    margin-top: -70px;
+    opacity: 0.2;
+  }
+
+  .navbar__responsive {
+    width: 375px;
+    height: 812px;
+    background-color: #262525;
+    position: fixed;
+    top: 0;
+    right: -375px;
+    z-index: 21;
+    transition: ease-in 0.5s;
+  }
+
+  .appear {
+    right: 138px;
+  }
+
+  .navbar__interior {
+    list-style-type: none;
+    padding-top: 130px;
+    padding-left: 50px;
+  }
+
+  .navbar__links {
+    color: white;
+    font-family: "sofiapro";
+    font-size: 18px;
+    line-height: 25.2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 30px;
+    letter-spacing: 1.72px;
+  }
+
+  .navbar__story {
+    color: white;
+    text-transform: uppercase;
+    font-family: "sofiapro";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    border-left: 2px solid #55bba6;
+    display: block;
+    padding-left: 10px;
+    padding-top: 10px;
+    letter-spacing: 1.72px;
   }
 
   .counter {
@@ -563,6 +658,22 @@ a {
 }
 
 @media (max-width: 640px) {
+  .hero {
+    background-position: center;
+  }
+
+  .hero__description {
+    left: 10px;
+  }
+
+  .logo {
+    margin-left: -68px;
+  }
+
+  .appear {
+    right: 117px;
+  }
+
   .gallery {
     margin-left: -120px;
   }
@@ -590,10 +701,15 @@ a {
 
   .navbar__logo {
     display: block;
-    margin-right: 155px;
+    margin-right: 290px;
+    margin-top: 60px;
   }
 
-  .burgermenu {
+  .appear {
+    right: 90px;
+  }
+
+  .navbar__hamburger {
     margin-left: 200px;
   }
 
@@ -711,12 +827,16 @@ a {
 }
 
 @media (max-width: 375px) {
+  .hero {
+    background-position: center;
+  }
   .navbar__logo {
     display: block;
-    margin-right: 125px;
+    margin-right: 200px;
+    margin-top: 120px;
   }
 
-  .burgermenu {
+  .navbar__hamburger {
     margin-left: 150px;
   }
 
@@ -725,7 +845,7 @@ a {
     flex-direction: column;
     padding-left: 25px;
     margin-top: 15px;
-    left: -4%;
+    left: -8%;
   }
 
   .hero__button {

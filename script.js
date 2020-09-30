@@ -4,13 +4,27 @@ const pictures = [
     'url(img/main-wolf-image-black.jpg)'
 ]
 
+let hero = document.querySelector('.hero');
 let x = 0;
+hero.style.backgroundSize = "cover";
+
 function heroChange() {
-    let hero = document.querySelector('.hero');
     hero.style.background = pictures[x];
     x = (x + 1) % pictures.length;
-    hero.style.backgroundSize = "cover";
+    hero.classList.toggle('transition')
 }
+setInterval(heroChange, 4000);
 
 
-setInterval(heroChange, 5000);
+
+
+
+const hamburger = document.querySelector('.navbar__hamburger');
+const navbar = document.querySelector('.navbar__responsive');
+
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('appear');
+
+
+
+})
