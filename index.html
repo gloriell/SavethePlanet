@@ -5,133 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Save The Planet</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="sidebar">
-      <div class="sidebar_details">
+      <div class="sidebar__details">
         <p>+40 070 991 598</p>
-        <img src="img/Oval.svg" alt="oval" />
+        <span class="green__dot"></span>
         <p>wild@life.com</p>
-        <img src="img/Oval.svg" alt="oval" />
+        <span class="green__dot"></span>
         <p>Wild Avenue,San Francisco, CA</p>
       </div>
     </div>
     <section class="hero">
       <nav class="navbar">
         <div class="logo"><img src="./img/Logo.svg" alt="Logo" /></div>
-
-        <div class="navbar_list">
+        <div class="navbar__list">
           <ul>
-            <li>
-              <a href="#"
-                >Home <img src="img/white-oval.svg" alt="" id="white-point"
-              /></a>
+            <li class="navbar__description">
+              <a href="#">Home</a>
             </li>
-            <li>
-              <a href="#" class="story-link"
-                >Story<img src="img/Path.svg" alt="down arrow"
-              /></a>
-
-              <div class="dropdown-container">
-                <img src="/img/Triangle.svg" alt="" />
-                <ul class="dropdown">
-                  <li><a href="#">Team</a></li>
-                  <img src="img/Rectangle.svg" alt="line" />
-                  <li><a href="#">Project</a></li>
-                  <img src="img/Rectangle.svg" alt="line" />
-                  <li><a href="#">Future</a></li>
+            <div class="navbar__description">
+              <a href="#" class="navbar__dropdown">Story<img src="img/Path.svg" alt="down arrow" class="story__image" /></a>
+              <div class="dropdown">
+                <img src="/img/Triangle.svg" alt="" class="little__triangle" />
+                <ul class="dropdown__container">
+                  <li class="dropdown__description">Team</li>
+                  <img src="img/Rectangle.svg" alt="line" class="dropdown__line" />
+                  <li class="dropdown__description">Project</li>
+                  <img src="img/Rectangle.svg" alt="line" class="dropdown__line" />
+                  <li class="dropdown__description">Future</li>
                 </ul>
               </div>
+            </div>
+            <li class="navbar__description">
+              <a href="#">Contact </a>
             </li>
-
-            <li>
-              <a href="#"
-                >Contact <img src="img/white-oval.svg" alt="" id="white-point"
-              /></a>
+            <li class="navbar__description">
+              <a href="#">Lesson</a>
             </li>
-            <li>
-              <a href="#"
-                >Lesson <img src="img/white-oval.svg" alt="" id="white-point"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                >Account <img src="img/white-oval.svg" alt="" id="white-point"
-              /></a>
+            <li class="navbar__description">
+              <a href="#">Account </a>
             </li>
           </ul>
         </div>
-      </nav>
-
-      <div class="interior_text">
-        <img src="img/green-line.svg" alt="" />
-        <h4>WE TEACH YOU TO PROTECT OUR</h4>
-        <h1>PLANET</h1>
-
-        <h6>Our planet is precious and vital for our</h6>
-        <h6>beautiful lives,if we don't take care of it</h6>
-        <h6>it will dissapear along with us.</h6>
-
-        <p>*Please take note that your actions matter more then you think.</p>
-        <div class="buttons">
-          <button class="primary-btn">Find out more</button>
-          <button class="secondary-btn">Play Video</button>
+        <div class="navbar__mobile">
+             <div class="navbar__logo"><img src="./img/mobile-logo.svg" alt="mobile logo for save the planet" /></div>
         </div>
-        <img class="down-arrow" src="img/Line_2.svg" alt="" />
+          <div class="navbar__responsive">
+            <div class="hamburger">
+              <span class="hamburger__line"></span>
+              <span class="hamburger__line"></span>
+              <span class="hamburger__line"></span>
+            </div>
+            <ul class="navbar__interior">
+              <div class="navbar__pumpkin"><img src="./img/mobile-logo.svg" alt="mobile logo for save the planet" /></div>
+              <span class="navbar__greyline"></span>
+              <li class="navbar__links">Home</li>
+              <li class="navbar__links" id="story">Story  <img src="./img/Path.svg" alt="down arrow" class="navbar__arrow"/>
+              <li class="navbar__story">team</li>
+              <li class="navbar__story">project</li>
+              <li class="navbar__story">future</li>
+            </li>
+              <li class="navbar__links">Contact</li>
+              <li class="navbar__links">Lesson</li>
+              <li class="navbar__links">Account</li>
+            </ul>
+          </div>
+        
+      </nav>
+      <div class="hero__description">
+        <span class="green__line"></span>
+        <h4 class="hero__introduction">we teach you to protect our planet</h4>
+        <h1 class="hero__banner">planet</h1>
+        <p class="hero__content">
+          Our planet is precious and vital for our beautiful lives, if we don't take care of it will dissapear along with us.
+        </p>
+        <p class="hero__advise">*Please take note that your actions matter more then you think.</p>
+        <div class="hero__button">
+          <button class="primary__btn">Find out more</button>
+          <button class="secondary__btn">Play Video</button>
+        </div>
+        <div class="hero__bottom">
+          <div class="arrow">
+            <img class="down__arrow" src="img/Line_2.svg" alt="down arrow" />
+          </div>
+          <div class="counter">
+            <button class="counter__number">1</button>
+            <span class="counter__line"></span>
+            <button class="counter__number">2</button>
+            <span class="counter__line"></span>
+            <button class="counter__number">3</button>
+          </div>
+        </div>
       </div>
     </section>
-
-    <div class="middle">
-      <h3 class="title">Our Mission</h3>
-      <div class="mini-hero">
-        <div class="txt1">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
-
-        <div class="txt2">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
-
-        <div class="txt3">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
+    <div class="mission">
+      <h3 class="mission__title">Our Mission</h3>
+      <div class="mission__description">
+        <p class="mission__text">Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.</p>
+        <p class="mission__text">Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.</p>
+        <p class="mission__text">Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.</p>
       </div>
     </div>
-
-    <section class="hero2">
-      <div class="overlay">
-        <div class="sheep-photo-above">
-          <img src="img/sheep_above.png" alt="" class="sheep_above" />
-        </div>
+    <section class="gallery">
+      <div class="gallery__sheep">
+        <img src="img/sheep_above.png" alt="Photo of sheep from above" class="gallery__above" />
       </div>
-
-      <div class="interior-stuff">
-        <img src="img/green-line.svg" alt="green line" />
-        <h2>Wildlife</h2>
-        <div class="writing">
-          <p>Our wildlife is important to us</p>
-          <p>if we dont' take care of it</p>
-          <p>maybe one day will turn</p>
-          <p>against us and we will die.</p>
-        </div>
-        <button class="primary-btn" id="prm-btn">Find out more</button>
+      <div class="gallery__interior">
+        <span class="green__line"></span>
+        <h2 class="gallery__title">Wildlife</h2>
+        <p class="gallery__description">
+          Our wildlife is important to us if we dont' take care of it maybe one day will turn against us and we will die.
+        </p>
+        <button class="primary__btn" id="prm__btn">Find out more</button>
       </div>
       <div class="photos">
         <div class="sheep">
-          <img src="/img/sheep.png" alt="" />
+          <img src="./img/sheep.jpg" alt="sheep walking on a hill" class="sheep__walking" />
         </div>
         <div class="nature">
-          <img src="img/mountain-lake.png" alt="" />
-          <img src="img/lighthouse.png" alt="" />
+          <img src="img/mountain-lake.png" alt="lake photographed from above" class="mountain__lake" />
+          <img src="img/lighthouse.png" alt="lighthouse on a cliff" class="lighthouse" />
         </div>
       </div>
     </section>

@@ -7,15 +7,22 @@
   src: url(font/sofiapro-light.otf);
 }
 
-:root {
-  font-size: 16px;
-}
-
 html,
 body {
   background-color: #f2f2f2;
   height: 100%;
-  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262625;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #55bba6;
 }
 
 * {
@@ -25,12 +32,30 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
-    url(img/main-wolf-image.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(img/main-wolf-image.png);
   background-size: cover;
-  margin-left: 4.5rem;
-  padding: 1rem;
+  background-position: center;
+  margin-left: 90px;
+  padding: 16px;
   height: 100%;
+  width: calc(100%-90px);
+  position: relative;
+}
+
+.hero.transition {
+  animation: transition 4s linear;
+}
+
+@keyframes transition {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 a {
@@ -39,24 +64,33 @@ a {
 }
 
 .sidebar {
-  width: 4.5rem;
+  width: 90px;
   height: 100%;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "sofiapro";
   position: absolute;
 }
-.sidebar_details {
+
+.sidebar__details {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding-right: 1.65rem;
-  height: 70%;
+  padding-right: 30px;
+  height: 100%;
   margin: auto;
   font-weight: bold;
   letter-spacing: 3px;
+}
+
+.green__dot {
+  height: 6px;
+  width: 6px;
+  background-color: #55bba6;
+  border-radius: 50%;
+  display: block;
 }
 
 .navbar {
@@ -65,7 +99,7 @@ a {
   align-items: center;
   justify-content: space-between;
   width: auto;
-  left: 18%;
+  left: 13.5%;
   right: 18%;
   margin-top: 20px;
   padding-top: 25px;
@@ -74,43 +108,46 @@ a {
 .logo {
   cursor: pointer;
 }
-.navbar_list {
-  font-size: 1.3rem;
-}
 
-.navbar_list li {
-  display: inline-block;
-  padding: 0px 15px;
-}
-
-.navbar_list img {
-  padding-left: 15px;
-}
-/* ----------Punctul apare doar daca fac hover pe punct nu si pe scris + pe celalalte decat home nu este aliniat--------- */
-#white-point {
-  display: flex;
-  padding: 10px 22px;
-  opacity: 0;
-}
-#white-point:hover {
-  opacity: 100;
-  transition: 0.3s ease all;
-}
-/* ---------------COD PENTRU DROPDOWN care nu functioneaza------------------- */
-.story-link {
-  display: flex;
-}
-
-.story-link:hover .dropdown-container {
-  display: block;
-}
-
-.dropdown-container {
-  position: relative;
+.navbar__logo {
   display: none;
 }
 
-.dropdown {
+.navbar__list {
+  font-size: 18px;
+  margin-left: auto;
+}
+
+.navbar__description {
+  display: inline-block;
+  padding: 0px 15px;
+  font-size: 18px;
+  letter-spacing: 23px;
+  letter-spacing: 0.92px;
+}
+
+.navbar__description::after {
+  content: url(./img/white-oval.svg);
+  display: flex;
+  padding: 10px 20px;
+  opacity: 0;
+}
+.navbar__description:hover::after {
+  opacity: 100;
+  transition: 0.3s ease all;
+}
+
+.navbar__responsive {
+  display: none;
+}
+
+/* ---------------COD PENTRU DROPDOWN care nu functioneaza------------------- */
+
+.story__image {
+  padding-left: 15px;
+}
+
+.dropdown__container {
   color: white;
   display: flex;
   flex-direction: column;
@@ -121,54 +158,125 @@ a {
   background-color: #272626;
   width: 161px;
   height: 186px;
+  list-style: none;
 }
 
-.dropdown a:hover {
+.dropdown {
+  position: absolute;
+  z-index: 22;
+  display: none;
+}
+
+.falling {
+  display: block;
+}
+
+.dropdown__description:hover {
   color: #55bba6;
   transition: all 0.5s ease;
 }
 
-.dropdown img {
-  padding-top: 10px;
+.little__triangle {
+  margin-left: 15px;
 }
 
 /* ---------------------------------------------------- */
 
 /* ----------scris interior cu butoane----------- */
-.interior_text {
+.hero__description {
   color: white;
+  position: absolute;
 }
 
-.interior_text h4 {
-  font-size: 1rem;
+.green__line {
+  border-bottom: 5px solid #55bba6;
+  width: 27px;
+  display: block;
+}
+
+.hero__introduction {
+  font-size: 16px;
+  line-height: 19px;
   letter-spacing: 2.4px;
   padding-top: 10px;
+  text-transform: uppercase;
 }
 
-.interior_text h1 {
-  font-size: 8.12rem;
+.hero__banner {
+  font-size: 130px;
   letter-spacing: 19.6px;
   padding: 15px 0px;
+  line-height: 178px;
+  text-transform: uppercase;
 }
 
-.interior_text h6 {
-  font-size: 1.12rem;
+.hero__content {
+  font-size: 18px;
   font-family: "SofiaPro";
   letter-spacing: 1.72px;
   padding: 5px 0px;
+  line-height: 29px;
+  width: 432px;
 }
 
-.interior_text p {
-  font-size: 0.75rem;
+.hero__advise {
+  font-size: 12px;
   letter-spacing: 0.7px;
   padding: 30px 0px;
+  line-height: 29px;
 }
 
-.buttons {
+.hero__bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  margin-left: 105%;
+}
+
+.counter__line {
+  display: block;
+  border-top: 2px solid white;
+  width: 10px;
+  margin: 0 5px;
+}
+
+.counter__number {
+  line-height: 26px;
+  width: 26px;
+  font-size: 12px;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  text-align: center;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.counter__number:hover {
+  color: black;
+  background-color: white;
+  width: 40px;
+  line-height: 40px;
+  transition: 0.3s all ease;
+  font-size: 18px;
+}
+
+.hero__button {
   display: inline;
 }
 
-.primary-btn {
+.primary__btn {
   background-color: #55bba6;
   border-radius: 2px;
   height: 60px;
@@ -177,7 +285,7 @@ a {
   outline: none;
 }
 
-.secondary-btn {
+.secondary__btn {
   width: 250px;
   height: 60px;
   border-radius: 2px;
@@ -187,59 +295,63 @@ a {
   margin: 50px 20px;
 }
 
-.primary-btn,
-.secondary-btn {
-  font-size: 1.12rem;
+.primary__btn,
+.secondary__btn {
+  font-size: 18px;
   font-family: "SofiaPro";
   letter-spacing: 0.7px;
   font-weight: bold;
   color: white;
+  line-height: 24px;
 }
-.primary-btn:hover {
+.primary__btn:hover {
   filter: brightness(85%);
   transition: 0.6s all ease;
 }
 
-.secondary-btn:hover {
+.secondary__btn:hover {
   background-color: white;
   color: black;
   transition: 0.6s all ease;
 }
 
-.interior_text {
+.hero__description {
   position: absolute;
-  left: 18%;
+  left: 14%;
   right: 18%;
   z-index: 1;
   height: 70%;
-  margin-top: 15%;
+  margin-top: 13%;
 }
 
-.down-arrow {
+.down__arrow {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   position: absolute;
 }
 /* -------------------------------------------- */
 
 /* ------------Paragrafe------------- */
-.middle {
+.mission {
   height: 30%;
 }
-.mini-hero {
+
+.mission__description {
   display: flex;
   color: #484848;
   font-family: "sofiaPro";
-  font-size: 1.2rem;
+  font-size: 18px;
+  line-height: 30px;
   left: 18%;
-  right: 30%;
+  right: 25%;
+  height: 350px;
   position: absolute;
   justify-content: space-between;
-  height: 50%;
 }
 
-.title {
-  font-size: 2.2rem;
+.mission__title {
+  font-size: 39px;
+  line-height: 49px;
   letter-spacing: 5.44px;
   color: #55bba6;
   position: relative;
@@ -247,19 +359,20 @@ a {
   padding: 60px 0px 30px 0;
 }
 
-.txt1 p,
-.txt2 p,
-.txt3 p {
-  padding: 4px 0px;
+.mission__text {
+  padding-right: 120px;
 }
 /* ------------------------------------ */
-.hero2 {
+.gallery {
   display: flex;
   position: absolute;
-  height: 60%;
+  height: 50%;
   left: 18%;
   right: 18%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
 .overlay {
   opacity: 1.2;
   background-color: black;
@@ -267,12 +380,14 @@ a {
   width: 485px;
   height: 599px;
 }
-.sheep-photo-above {
+
+.gallery__sheep {
   position: relative;
   width: 487px;
   height: 601px;
 }
-.interior-stuff {
+
+.gallery__interior {
   z-index: 1;
   position: absolute;
   color: white;
@@ -282,22 +397,522 @@ a {
   padding-left: 7%;
 }
 
-.hero2 h2 {
-  font-size: 1.8rem;
+.gallery__title {
+  font-size: 28px;
+  line-height: 38px;
   letter-spacing: 3.76px;
   padding: 5px 0px 15px 0px;
 }
 
-.hero2 p {
-  font-size: 1.2rem;
+.gallery__description {
+  font-size: 18px;
+  line-height: 30px;
   font-family: "sofiaPro";
-  padding-bottom: 7px;
-}
-
-.writing {
-  padding-bottom: 40px;
+  margin-bottom: 35px;
+  width: 241px;
+  height: 120px;
 }
 
 .photos {
   margin: 0 4px;
+}
+
+.sheep__tablet {
+  display: none;
+}
+
+.lighthouse__tablet {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  .gallery {
+    margin: 50px -100px;
+  }
+
+  .mission__description {
+    width: 70%;
+  }
+
+  .mission__text {
+    height: 130px;
+    padding-right: 50px;
+  }
+
+  .mission__text:first-of-type {
+    padding-right: 30px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+  }
+
+  .mission__text:nth-child(2) {
+    padding-right: 30px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .gallery {
+    margin: 80px -100px;
+  }
+
+  .mission__description {
+    width: 70%;
+  }
+
+  .mission__text {
+    height: 120px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .gallery {
+    margin: 80px -180px;
+  }
+
+  .mission__description {
+    width: 90%;
+  }
+
+  .mission__text {
+    height: 90px;
+    padding-right: 20px;
+  }
+}
+
+/* tablet view */
+@media (max-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(img/hero-image-tablet.jpg);
+  }
+
+  .hero__description {
+    padding-top: 100px;
+  }
+
+  .hero__introduction {
+    font-size: 16px;
+    letter-spacing: 2.41px;
+  }
+
+  .hero__banner {
+    font-size: 110px;
+    letter-spacing: 16.62px;
+  }
+
+  .hero__content {
+    font-size: 18px;
+    letter-spacing: 1.72px;
+  }
+
+  .hero__advise {
+    font-size: 12px;
+    letter-spacing: 0.7px;
+  }
+
+  .hero__button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .down__arrow {
+    display: none;
+  }
+
+  .sidebar__details {
+    height: 90%;
+  }
+
+  .navbar {
+    margin: 0 auto;
+  }
+
+  .navbar__description {
+    display: none;
+  }
+
+  .navbar__responsive {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 14px;
+    width: 18px;
+    position: fixed;
+    top: 60px;
+    right: 200px;
+    z-index: 20;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .hamburger__line {
+    border-top: 2px solid white;
+    transition: all 1.5s;
+  }
+
+  .appear .hamburger__line:first-of-type {
+    transform: translateY(7px) rotateZ(405deg);
+    border-top: 2px solid #55bba6;
+  }
+
+  .appear .hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .appear .hamburger__line:last-of-type {
+    transform: translateY(-5px) rotateZ(-405deg);
+    border-top: 2px solid #55bba6;
+  }
+
+  .navbar__greyline {
+    border-bottom: 2px solid #ffffff;
+    opacity: 0.2;
+    display: block;
+    width: 100px;
+    padding-top: 50px;
+  }
+
+  .navbar__pumpkin {
+    margin-top: -70px;
+    opacity: 0.2;
+  }
+
+  .navbar__responsive {
+    width: 375px;
+    height: 812px;
+    background-color: #262525;
+    position: fixed;
+    top: 0;
+    right: -375px;
+    z-index: 21;
+    transition: ease-in 0.5s;
+  }
+
+  .appear {
+    right: 138px;
+  }
+
+  .navbar__interior {
+    list-style-type: none;
+    padding-top: 130px;
+    padding-left: 50px;
+  }
+
+  .navbar__links {
+    color: white;
+    font-family: "sofiapro";
+    font-size: 18px;
+    line-height: 25.2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 30px;
+    letter-spacing: 1.72px;
+  }
+
+  .navbar__links:hover {
+    cursor: pointer;
+  }
+
+  .navbar__story {
+    color: white;
+    text-transform: uppercase;
+    font-family: "sofiapro";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    border-left: 2px solid #55bba6;
+    display: block;
+    padding-left: 10px;
+    padding-top: 10px;
+    letter-spacing: 1.72px;
+    display: none;
+  }
+
+  .change {
+    display: block;
+  }
+
+  .counter {
+    margin-left: 90%;
+  }
+
+  .mission__description {
+    width: 80%;
+  }
+
+  .mission__text:last-of-type {
+    display: none;
+  }
+
+  .mountain__lake {
+    display: none;
+  }
+
+  .sheep__walking {
+    width: 271px;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  .lighthouse {
+    width: 271px;
+    height: 216px;
+    object-fit: cover;
+  }
+
+  .gallery {
+    margin-left: -133px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    background-position: center;
+  }
+
+  .hero__description {
+    left: 10px;
+  }
+
+  .logo {
+    margin-left: -68px;
+  }
+
+  .appear {
+    right: 117px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    margin-left: -110px;
+  }
+
+  .gallery__above {
+    width: 350px;
+    height: 600px;
+    object-fit: cover;
+    padding: 4px 0;
+    margin-left: 4px;
+  }
+
+  .counter {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+/* mobile view */
+@media (max-width: 500px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(img/hero-image-phone.jpg);
+    background-size: cover;
+    position: relative;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+  }
+
+  .navbar__logo {
+    display: block;
+    margin-right: 290px;
+    margin-top: 60px;
+  }
+
+  .appear {
+    right: 1px;
+  }
+
+  .hamburger {
+    margin-right: -150px;
+  }
+
+  .hero__description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-top: 15px;
+    left: 1%;
+  }
+
+  .hero__introduction {
+    font-size: 16px;
+    letter-spacing: 2.41px;
+  }
+
+  .hero__banner {
+    font-size: 60px;
+    letter-spacing: 9.06px;
+    margin-top: -50px;
+  }
+
+  .hero__content {
+    font-size: 16px;
+    letter-spacing: 1.52px;
+    width: 300px;
+    margin-top: -50px;
+  }
+
+  .hero__advise {
+    font-size: 12px;
+    letter-spacing: 0.7px;
+  }
+
+  .hero__button {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    margin-right: 85px;
+  }
+
+  .secondary__btn {
+    margin-top: 20px;
+  }
+
+  .navbar {
+    margin: 0 auto;
+  }
+
+  .sidebar__details {
+    height: 80%;
+  }
+  .navbar__description {
+    display: none;
+  }
+
+  .mission__title {
+    font-size: 36px;
+    letter-spacing: 5.44px;
+    margin-top: -10px;
+  }
+
+  .mission__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .mission__text:first-of-type {
+    padding-right: 100px;
+    margin-bottom: 60px;
+  }
+
+  .mission__text:nth-child(2) {
+    padding-right: 100px;
+  }
+
+  .gallery {
+    margin-top: 200px;
+  }
+
+  .lighthouse {
+    width: 350px;
+    height: 212px;
+    object-fit: cover;
+  }
+
+  .sheep__walking {
+    width: 350px;
+    height: 237px;
+    object-fit: cover;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px;
+  }
+
+  .gallery__sheep {
+    width: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    background-position: center;
+  }
+
+  .navbar__logo {
+    display: block;
+    margin-right: 210px;
+    margin-top: 60px;
+  }
+
+  .hamburger {
+    margin-left: 150px;
+  }
+
+  .hero__description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-top: 15px;
+    left: -8%;
+  }
+
+  .hero__banner {
+    font-size: 55px;
+  }
+
+  .hero__button {
+    margin-left: 140px;
+  }
+
+  .hero__content {
+    width: 250px;
+    margin-left: 5px;
+  }
+
+  .mission__title {
+    font-size: 34px;
+    letter-spacing: 5.44px;
+    margin-top: -10px;
+    margin-left: 90px;
+  }
+
+  .mission__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+  .mission__text:first-of-type {
+    width: 250px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .mission__text:nth-child(2) {
+    width: 250px;
+    padding: 0;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+  }
 }
